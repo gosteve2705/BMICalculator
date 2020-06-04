@@ -17,7 +17,7 @@ app.post('/', function(req,res){
 
   var bmi = weight / Math.pow(height, 2);
   bmi = bmi.toFixed(2);
-  
+
   res.send(`Your BMI is ${bmi} Kg/(m)2` );});
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
